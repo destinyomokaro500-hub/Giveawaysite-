@@ -1,0 +1,249 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>$500,000 Luxury Giveaway</title><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"><style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat',sans-serif;
+}
+
+body{
+background:#000;
+color:white;
+overflow-x:hidden;
+background-image:
+radial-gradient(circle at top,
+rgba(255,215,0,0.08),
+transparent 60%);
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+url("tesla.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero h1{
+font-family:'Cinzel',serif;
+font-size:4rem;
+margin-bottom:15px;
+color:#FFD700;
+letter-spacing:4px;
+text-transform:uppercase;
+font-weight:700;
+text-shadow:0 0 20px rgba(255,215,0,0.5);
+}
+
+.hero p{
+font-size:1.3rem;
+line-height:1.8;
+margin-bottom:25px;
+}
+
+.timer{
+font-size:2rem;
+font-weight:bold;
+color:#00ffcc;
+margin:20px 0;
+}
+
+.btn{
+padding:16px 40px;
+background:#FFD700;
+color:#000;
+border:none;
+border-radius:40px;
+font-size:18px;
+font-weight:600;
+letter-spacing:2px;
+text-transform:uppercase;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+.section{
+padding:100px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+font-family:'Cinzel',serif;
+text-align:center;
+font-size:3rem;
+margin-bottom:50px;
+color:#FFD700;
+letter-spacing:3px;
+font-weight:600;
+}
+
+.prize-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#111;
+border:1px solid #333;
+padding:30px;
+border-radius:20px;
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3,
+.feature h3{
+font-family:'Cinzel',serif;
+color:#FFD700;
+margin-bottom:10px;
+letter-spacing:1px;
+}
+
+.entry-form{
+max-width:600px;
+margin:auto;
+background:#111;
+padding:40px;
+border-radius:20px;
+}
+
+.entry-form input{
+width:100%;
+padding:15px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+font-size:16px;
+}
+
+.entry-form button{
+width:100%;
+padding:15px;
+background:#FFD700;
+color:black;
+border:none;
+border-radius:10px;
+font-size:18px;
+font-weight:600;
+letter-spacing:2px;
+text-transform:uppercase;
+cursor:pointer;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.feature{
+background:#111;
+padding:30px;
+border-radius:20px;
+text-align:center;
+}
+
+footer{
+background:#050505;
+padding:40px;
+text-align:center;
+color:#aaa;
+}
+
+</style></head><body><section class="hero"><div class="hero-content"><h1>$500,000 MEGA GIVEAWAY 🎁🎉 </h1><p>
+50 Winners Will Receive A Share Of Our
+$500,000 Prize Pool.
+</p><div class="timer" id="countdown">
+Loading...
+</div><button class="btn"
+onclick="document.getElementById('enter').scrollIntoView({behavior:'smooth'})">
+ENTER NOW
+</button>
+
+</div></section><section class="section"><h2 class="section-title">Prize Breakdown</h2><div class="prize-grid"><div class="card">
+<h3>Grand Prize💰</h3>
+<p>$50,000</p>
+</div><div class="card">
+<h3>Top Winners 🏆</h3>
+<p>10 Winners Receive $10,000 Each</p>
+</div><div class="card">
+<h3>Additional Winners 
+</h3>
+<p>39 Winners Share Remaining Prize Pool</p>
+</div></div></section><section class="section"><h2 class="section-title">Why Join?</h2><div class="features"><div class="feature">
+<h3>100% Free Entry</h3>
+<p>No purchase required.</p>
+</div><div class="feature">
+<h3>Fair Selection</h3>
+<p>Randomly selected winners.</p>
+</div><div class="feature">
+<h3>Global Access</h3>
+<p>Open to eligible participants.</p>
+</div></div></section><section class="section" id="enter"><h2 class="section-title">Enter Giveaway</h2><form class="entry-form"><input type="text" placeholder="Full Name" required><input type="email" placeholder="Email Address" required><input type="tel" placeholder="Phone Number" required><input type="text" placeholder="Country" required><button type="submit">
+Submit Entry
+</button></form></section><section class="section"><h2 class="section-title">Official Notice</h2><p style="text-align:center;max-width:800px;margin:auto;line-height:1.8;">
+Participation is subject to eligibility requirements,
+official rules, and applicable laws. Winners will be
+contacted using the information provided during entry.
+</p></section><footer><p>© 2026 Mega Giveaway. All Rights Reserved.</p></footer><script>
+
+const targetDate =
+new Date("December 31, 2026 23:59:59").getTime();
+
+setInterval(function(){
+
+const now = new Date().getTime();
+
+const distance = targetDate - now;
+
+const days =
+Math.floor(distance/(1000*60*60*24));
+
+const hours =
+Math.floor((distance%(1000*60*60*24))
+/(1000*60*60));
+
+const minutes =
+Math.floor((distance%(1000*60*60))
+/(1000*60));
+
+const seconds =
+Math.floor((distance%(1000*60))
+/1000);
+
+document.getElementById("countdown")
+.innerHTML =
+days+"d "+
+hours+"h "+
+minutes+"m "+
+seconds+"s";
+
+},1000);
+
+</script></body>
+</html>
